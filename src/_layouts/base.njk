@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    {% if description %}
+      <meta name="description" content="{{ description }}">
+    {% endif %}
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-900 text-slate-200">
+    <main class="max-w-3xl mx-auto px-4 py-8">
+      {{ content | safe }}
+    </main>
+  </body>
+</html>

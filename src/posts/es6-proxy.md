@@ -1,4 +1,10 @@
-# Про обʼєкт Proxy в JavaScript
+---
+title: Обʼєкт Proxy в JavaScript
+date: 2023-01-27
+description: Теоретична збірка про обʼєкт Proxy в JavaScript та приклади його використання
+tags:
+  - javascript
+---
 
 Це розповідь про обʼєкт `Proxy`, який зʼявився в [ES6](https://262.ecma-international.org/6.0/#sec-proxy-object-internal-methods-and-internal-slots).
 

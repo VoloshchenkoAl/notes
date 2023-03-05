@@ -1,4 +1,11 @@
-# Про кастомні скалярні типи в Apollo GraphQL
+---
+title: Кастомні скалярні типи в Apollo GraphQL
+date: 2023-02-28
+description: Невеличка нотатка про кастомні скалярні типи в Apollo GraphQL. Та яку задачку розвʼязав завдяки їх допомозі
+tags:
+  - graphql
+  - javascript
+---
 
 ## Передісторія
 

@@ -1,0 +1,31 @@
+---
+layout: base.njk
+---
+
+<section>
+  <header class="mb-8">
+    <h1 class="text-5xl leading-tight font-bold">{{ title }}</h1>
+    <div class="flex items-center justify-between gap-2 flex-wrap">
+      <p>
+        <time class="text-sm opacity-80" datetime="{{ date | htmlDateString }}">
+          {{ date | readableDate }}
+        </time>
+      <ul class="flex gap-2 opacity-80">
+        {% for tag in tags | postTags %}
+          <li class="text-sm">#{{tag}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </header>
+
+  <article class="article mb-12">
+    {{ content | safe }}
+  </article>
+
+  <footer class="border border-current p-4 px-6 rounded">
+    <p class="">
+      Якщо ви хочете доповнити текст або вказати на технічні помилки, то буду дуже вдячний за вашу допомогу!
+      <a href="https://github.com/VoloshchenkoAl/notes" class="text-blue-400 hover:underline" target="_blank">Посилання на гітхаб репозиторія</a>
+    </p>
+  </footer>
+</section>
