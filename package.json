@@ -1,0 +1,30 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Notes about programming",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoloshchenkoAl/notes.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Oleksandr Voloshchenko"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VoloshchenkoAl/notes/issues"
+  },
+  "homepage": "https://github.com/VoloshchenkoAl/notes#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "luxon": "^3.3.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
+}

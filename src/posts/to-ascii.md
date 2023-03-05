@@ -1,4 +1,11 @@
-# Про конвертацію графічного контенту в ASCII символи
+---
+title: Конвертація графічного контенту в ASCII символи
+date: 2023-02-23
+description: Експеремент з canvas та його можливостями у роботі з зображеннями
+tags:
+  - javascript
+  - canvas
+---
 
 Якось зрозумів, що у повсякденній роботі не використовую `canvas`. Хоча завдяки його `API` можна створювати фантастичні проєкти
 
@@ -18,7 +25,7 @@
 
 Приклад того, що планую отримати для картинок. Зліва — оригінальна картинка, справа — конвертована картинка в ascii символи
 
-![example of idea](./example.png)
+![example of idea](/assets/images/to-ascii/example.png)
 
 ## Реалізація
 
@@ -34,7 +41,7 @@
 
 Картинка для візуальної ілюстрації
 
-![Converting color to gray to ascii](./color-to-gray-to-ascii.png)
+![Converting color to gray to ascii](/assets/images/to-ascii/color-to-gray-to-ascii.png)
 
 #### Діставання інформації про колір картинки
 
@@ -86,7 +93,7 @@ img.onload = function () {
 
 На даному етапі відбувається копіювання картинки з `img` в `canvas`
 
-![Converting color to gray to ascii. Part 1](./part-1.png)
+![Converting color to gray to ascii. Part 1](/assets/images/to-ascii/part-1.png)
 
 Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/rNrXQpy)
 
@@ -132,7 +139,7 @@ function rgbToGray(r, g, b) {
 
 В результаті цих маніпуляцій отримуємо картинку конвертовану у відтінки сірого
 
-![Converting color to gray to ascii. Part 2](./part-2.png)
+![Converting color to gray to ascii. Part 2](/assets/images/to-ascii/part-2.png)
 
 Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/xxaKwbg)
 
@@ -140,7 +147,7 @@ function rgbToGray(r, g, b) {
 
 Найцікавіша частина: як конвертувати відтінки сірого у `ASCII` символи? На початку статті вже було проговорено правило: чим темніший піксель картинки — тим щільніший буде символ. Але що означає "щільний символ"? Умовно кажучи — чим щільніший символ використовуємо, тим темнішим він буде видаватися. Оскільки `ASCII` символів багато і вони доволі різноманітні, то вибравши з них потрібні елементи та впорядкувавши їх по щільності можна отримати градієнт, який подібний до градієнта відтінків сірого. У цьому випадку буде використовуватися послідовність `Ñ@#W$9876543210?!abc;:+=-,._ `, яка взята з сайту [play.ertdfgcvb.xyz](https://play.ertdfgcvb.xyz/)
 
-![Gray to ASCII symbols](./gray-to-ascii.png)
+![Gray to ASCII symbols](/assets/images/to-ascii/gray-to-ascii.png)
 
 Використовуючи функцію `rgbToGray`, яка описана вище, можливо отримати 256 відтінків сірого. Ці відтінки можна зіставити з послідовністю `Ñ@#W$9876543210?!abc;:+=-,._ `.
 
@@ -181,7 +188,7 @@ function grayToSymbol(gray) {
 3. Перед ітерацією описано декілька маніпуляцій з `canvas`, які необхідні для коректного відображення символів
 4. У самій ітерації відбувається заміна кожного пікселя картинки на відповідний символ
 
-![Converting color to gray to ascii. Part 3](./part-3.png)
+![Converting color to gray to ascii. Part 3](/assets/images/to-ascii/part-3.png)
 
 Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/ExeYVMb)
 
@@ -217,7 +224,7 @@ for (let x = 0; x < sceneWidth / PIXEL_SHIFT; x++) {
 
 Це вже краще
 
-![Converting color to gray to ascii. Part 4](./part-4.png)
+![Converting color to gray to ascii. Part 4](/assets/images/to-ascii/part-4.png)
 
 Тепер спробуємо інвертувати кольори та символи
 
@@ -243,7 +250,7 @@ function grayToSymbol(gray) {
 
 Результат фінальної ітерації
 
-![Converting color to gray to ascii. Part 5](./part-5.png)
+![Converting color to gray to ascii. Part 5](/assets/images/to-ascii/part-5.png)
 
 Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/MWqgyKP)
 
