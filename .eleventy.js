@@ -1,6 +1,7 @@
 const { DateTime, Settings } = require('luxon');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
+const codepenRules = require('@digitalocean/do-markdownit/rules/embeds/codepen');
 
 module.exports = function (eleventyConfig) {
   Settings.defaultLocale = 'uk-UA';
@@ -24,6 +25,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('postTags', function filterTagList(tags) {
     return (tags || []).filter((tag) => !['post'].includes(tag));
   });
+
+  eleventyConfig.amendLibrary('md', (mdLib) => mdLib.use(codepenRules));
 
   eleventyConfig.addPassthroughCopy('./src/assets/css');
   eleventyConfig.addPassthroughCopy('./src/assets/images');
