@@ -26,5 +26,8 @@
     "luxon": "^3.3.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@digitalocean/do-markdownit": "^1.7.1"
   }
 }

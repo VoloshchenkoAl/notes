@@ -93,9 +93,7 @@ img.onload = function () {
 
 На даному етапі відбувається копіювання картинки з `img` в `canvas`
 
-![Converting color to gray to ascii. Part 1](/assets/images/to-ascii/part-1.png)
-
-Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/rNrXQpy)
+[codepen VoloshchenkoAl rNrXQpy dark 376]
 
 #### Конвертація кольорів у сірі відтінки
 
@@ -104,7 +102,6 @@ img.onload = function () {
 Скомбінуємо цю формулу з кодом попереднього етапу
 
 ```js
-// + code above
 const imageData = ctx.getImageData(0, 0, sceneWidth, sceneHeight);
 const data = imageData.data;
 
@@ -139,9 +136,7 @@ function rgbToGray(r, g, b) {
 
 В результаті цих маніпуляцій отримуємо картинку конвертовану у відтінки сірого
 
-![Converting color to gray to ascii. Part 2](/assets/images/to-ascii/part-2.png)
-
-Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/xxaKwbg)
+[codepen VoloshchenkoAl xxaKwbg dark 376]
 
 #### Конвертація відтінків сірого у ASCII символ
 
@@ -188,9 +183,7 @@ function grayToSymbol(gray) {
 3. Перед ітерацією описано декілька маніпуляцій з `canvas`, які необхідні для коректного відображення символів
 4. У самій ітерації відбувається заміна кожного пікселя картинки на відповідний символ
 
-![Converting color to gray to ascii. Part 3](/assets/images/to-ascii/part-3.png)
-
-Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/ExeYVMb)
+[codepen VoloshchenkoAl ExeYVMb dark 376]
 
 Але результат виглядає не дуже 😭
 
@@ -224,7 +217,7 @@ for (let x = 0; x < sceneWidth / PIXEL_SHIFT; x++) {
 
 Це вже краще
 
-![Converting color to gray to ascii. Part 4](/assets/images/to-ascii/part-4.png)
+[codepen VoloshchenkoAl rNZBeNo dark 376]
 
 Тепер спробуємо інвертувати кольори та символи
 
@@ -250,9 +243,7 @@ function grayToSymbol(gray) {
 
 Результат фінальної ітерації
 
-![Converting color to gray to ascii. Part 5](/assets/images/to-ascii/part-5.png)
-
-Код цього етапу доступний у [`codepen`](https://codepen.io/VoloshchenkoAl/details/MWqgyKP)
+[codepen VoloshchenkoAl MWqgyKP dark 376]
 
 ## Матеріали
 
